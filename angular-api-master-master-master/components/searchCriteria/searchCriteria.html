@@ -1,0 +1,12 @@
+<div class="searchContainer">
+<input id = "searchInput" ng-model = "$ctrl.searchInput" type="text" 
+placeholder="Search for a film...">
+<button ng-click="$ctrl.getThings()" type="submit" style="height: 55px">SUBMIT</button>
+<div ng-repeat = 'result in $ctrl.results' ng-click="b"> 
+    <h1>{{result.title}}</h1>
+    <h2>{{result.overview}}</h2>
+<img src="https://image.tmdb.org/t/p/w500/{{result.poster_path}}" style="width: 300px">
+<button id="watchlist" ng-click="$ctrl.addToWatch(result)" style="height: 40px">Add to Watchlist</button>
+</div>
+</div>
+
